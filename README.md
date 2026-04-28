@@ -7,14 +7,17 @@ For my Capstone project I trained a model to predict the Aflatoxin contamination
 ### 3. Project Overview
 
 ### 4. Data
-Source:
-https://agpmt.org/data-management/ 
-Type:
-CSV
-Size:
-(1048576, 37)
-Key features:
-Location, NOLA_ID, Planting_Date, Harvest_Date, GPS, Temperature, Precipiation, NDVI
+Source:  
+https://agpmt.org/data-management/   
+
+Type:  
+CSV  
+
+Size:  
+(1048576, 37)  
+
+Key features:  
+Location, NOLA_ID, Planting_Date, Harvest_Date, GPS, Temperature, Precipiation, NDVI  
 
 ### 5. Data Preprocessing
 #### Cleaning Steps:
