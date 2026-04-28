@@ -3,19 +3,27 @@
 ### 2. Problem/Motivation
 Mycotoxins are toxins produced by fungi that colonize food crops and can cause serious economic burden to the US corn industry. Aflatoxins may occur in food because of mold growth in susceptible raw agricultural products. The growth of molds that produce aflatoxins is influenced by environmental factors such as temperature, humidity, and extent of rainfall during the pre-harvesting, harvesting, or post-harvesting periods (FDA). It has been estimated that aflatoxin contamination could cause losses ranging from $52.1 million to $1.68 billion annually in the United States (Castano-Duque et al). It has been proven that healthier plants are less at risk. Also, plants are more at risk in hot and dry conditions. Pre-and post-planting weather factors are significantly correlated with Aflatoxin and Fumonisin contamination at harvest which is why I gathered weather data from six months before and after the planting dates given in my datasets.
 Aflatoxins are one of the most problematic because of their carcinogenic and mutagenic properties that can contaminate food and feed. The FDA says that human food containing total aflatoxins greater than 20 micrograms per kilogram, or ppb may be injurious to health. Consumption of food with high levels of aflatoxins is also associated with liver cancer in humans. 
-For my Capstone project I plan to train a model that can predict the Aflatoxin contamination at harvest using weather data. In Capstone 1 I created a baseline model and a linear regression model. 
+For my Capstone project I trained a model to predict the Aflatoxin contamination at harvest using weather data. In Capstone 1 I created a baseline model and a linear regression model. 
 ### 3. Project Overview
 
 ### 4. Data
-Source (link)
-Type
-Size
-Key features
+Source:
+https://agpmt.org/data-management/ 
+Type:
+CSV
+Size:
+(1048576, 37)
+Key features:
+Location, NOLA_ID, Planting_Date, Harvest_Date, GPS, Temperature, Precipiation, NDVI
 
 ### 5. Data Preprocessing
-Cleaning Steps
-Handling missing values
-Feature engineering
+#### Cleaning Steps:
+I had to make sure each row had a PLanting_Date, Harvest_Date, and GPS coordinates otherwise those rows were not usefull.
+I collected the weather data hourly at first and then daily and weekly.
+#### Handling missing values:
+The only weather feature with missing values was NDVI since I used a quailty assurance mask to only use values that were valid. This means when it was very cloudy or there was snow that NDVI was not included in my data.
+#### Feature engineering:
+GPS was  split into Latitude and Longitude. Aflatoin Risk Index code was used in R to calculate that weekly value as well as features like Growing Degree Days and Cumulative Growing Degree Days.
 
 ### 6. Exploratory Data Analysis
 Visualizations
