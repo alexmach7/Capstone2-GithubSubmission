@@ -54,13 +54,21 @@ This suggests that aflatoxin prediction depends on nonlinear interactions betwee
   
 
 ### 7. Modeling Approach
-Baseline model
-One advanced model
-Why I chose them
+Baseline model:
+Random Forest using GroupKFold with 5 folds by Location.
+I used grouped cross-validation by location to avoid spatial leakage. This ensures the model is tested on locations it has not seen before. Results are an RMSE of 2.30, MAE of 0.64, and an R² of -0.09. The negative R² suggests that predicting aflatoxin across different locations is challenging, likely due to strong environmental and regional differences.
+
+One advanced model:  
+I moved on to a two-stage approach. The first stage being a classification model to determine contamination or no contamination. Stage two is a regression mode to preditc aflatoxin amount only for those contaminated cases.
+
+Why I chose them:  
+It is important to note that my dataset is about 90% zeroes in the aflatoxin target, meaning 90% of the crops were not contaminated. When I evaluated the baseline random forest model specifically on non-zero aflatoxin cases, the error increased substantially. This shows that while the model handles the majority of zero cases well, it struggles to predict actual contamination events. This highlights the need for a different modeling strategy, the two-stage approach.
+
 
 ### 8. Model Training 
 Tools used
-Hyperparameters
+Hyperparameters:  
+Starting at a default threshold of 0.5 with the regression model gave me an R² of
 Training process
 
 ### 9. Results
