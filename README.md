@@ -29,8 +29,29 @@ The only weather feature with missing values was NDVI since I used a quailty ass
 GPS was  split into Latitude and Longitude. Aflatoin Risk Index code was used in R to calculate that weekly value as well as features like Growing Degree Days and Cumulative Growing Degree Days.
 
 ### 6. Exploratory Data Analysis
-Visualizations
-Clear insights
+<img width="612" height="363" alt="image" src="https://github.com/user-attachments/assets/d7b5a4f6-23d1-44ac-b51b-ed74528cf8df" />  
+Locations of GPS coordinated for each year.  
+  
+
+<img width="285" height="169" alt="image" src="https://github.com/user-attachments/assets/70fc8970-f446-4375-9723-c2bc3fba6f56" />  
+Aflatoxin contamination results at harvest.
+  
+
+<img width="570" height="510" alt="image" src="https://github.com/user-attachments/assets/8fbad414-2b3c-4af2-9e05-b769c3919596" />  
+Example of NDVI.
+  
+
+<img width="462" height="413" alt="image" src="https://github.com/user-attachments/assets/6f08668f-a277-4108-826e-7174f31ed61f" />  
+Confustion matrix with only weather features. 
+  
+
+<img width="400" height="358" alt="image" src="https://github.com/user-attachments/assets/6a1e4c94-92b7-426a-b060-1ef249f2f7c2" />
+Confusion Matrix with ARI features. The correlation matrix shows that no single variable strongly explains aflatoxin contamination.
+However, strong correlations exist between engineered features such as GDD, growth variables, and ARI, indicating redundancy.
+This suggests that aflatoxin prediction depends on nonlinear interactions between environmental and biological factors, rather than simple linear relationships.  
+  
+<img width="834" height="54" alt="image" src="https://github.com/user-attachments/assets/5b4463f6-2a34-4be8-b184-931e4e6b1049" />
+  
 
 ### 7. Modeling Approach
 Baseline model
