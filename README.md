@@ -68,7 +68,24 @@ It is important to note that my dataset is about 90% zeroes in the aflatoxin tar
 ### 8. Model Training 
 Tools used
 Hyperparameters:  
-Starting at a default threshold of 0.5 with the regression model gave me an R² of
+Starting at a default threshold of 0.5 with the regression model gave me   
+RMSE: 1.6887343388777052  
+MAE: 1.6695052547403957  
+R²: -4.507769503825259e+30  
+When I changed the threshold to 0.35, which is appropriate for this project where missing contamination is more hurtful than false positives. My results then greatly improved and my results overall were.  
+RMSE: 0.8799  
+MAE : 0.2648  
+R²  : 0.3875  
+And for non-zero only:  
+RMSE: 1.6258  
+MAE : 0.8014  
+R²  : 0.2799  
+<img width="149" height="113" alt="image" src="https://github.com/user-attachments/assets/de60ed23-6c4c-455e-b36d-b92ed1c943fd" />
+
+<img width="149" height="113" alt="image" src="https://github.com/user-attachments/assets/22e2c0e2-4559-45be-8318-18036425097f" />
+
+<img width="275" height="117" alt="image" src="https://github.com/user-attachments/assets/cfe69bb2-d37d-45a6-80d3-80054be0f9ac" />
+
 Training process
 
 ### 9. Results
