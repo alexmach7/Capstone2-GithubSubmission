@@ -80,20 +80,35 @@ And for non-zero only:
 RMSE: 1.6258  
 MAE : 0.8014  
 R²  : 0.2799  
-<img width="149" height="113" alt="image" src="https://github.com/user-attachments/assets/de60ed23-6c4c-455e-b36d-b92ed1c943fd" />
-
-<img width="149" height="113" alt="image" src="https://github.com/user-attachments/assets/22e2c0e2-4559-45be-8318-18036425097f" />
-
-<img width="275" height="117" alt="image" src="https://github.com/user-attachments/assets/cfe69bb2-d37d-45a6-80d3-80054be0f9ac" />
-
-Training process
 
 ### 9. Results
-Metrics (Clearly defined metrics(with explanation of why they were chosen))
-Model comparison table
-Visualization
+To evaluate the models, I used both classification and regression metrics because the project has two goals. First, predicting whether aflatoxin contamination occurs then estimating the aflatoxin level.
+For the classification model I used:  
+Accuracy: Measures the overall percentage of correct predictions. However, because aflatoxin data can be imbalanced, accuracy alone is not enough.
+Precision: Measures how many predicted contamination cases were actually contaminated. This is important because false alarms could lead to unnecessary concern or extra testing.
+Recall: Measures how many true contamination cases the model successfully identified. This is especially important because missing a contaminated sample could have serious agricultural and food safety consequences.
+F1-score: Balances precision and recall, making it useful when the dataset has uneven classes.
+ROC-AUC: Measures how well the model separates contaminated and non-contaminated samples across different thresholds.
+For the regression model, I used:
+MAE: Measures the average size of prediction errors. It is easy to interpret because it is in the same general scale as the target variable.
+RMSE: Penalizes larger errors more strongly, which is useful because very high aflatoxin levels are especially important to predict.
+R²: Shows how much variation in aflatoxin levels the model explains.
+
+
+
+  Baseline Models Comparison Table:   
+<img width="425" height="105" alt="image" src="https://github.com/user-attachments/assets/731bbdbc-6f06-4f19-95b0-eb7321434a5e" />
+<img width="389" height="214" alt="image" src="https://github.com/user-attachments/assets/57d2cc72-145d-423a-90e0-1120f44b3a48" />
+<img width="514" height="365" alt="image" src="https://github.com/user-attachments/assets/bc4421bd-63ba-42c2-a186-f4593f823d00" />
+
+
 
 ### 10. Model Interpretation
+Model interpretation was performed using feature importance and SHAP values. These methods helped identify which variables had the strongest influence on aflatoxin prediction.
+Important features included variables such as NDVI, temperature, precipitation, relative humidity, GDD, cumulative GDD, and days from planting. These features are biologically meaningful because aflatoxin contamination is affected by plant stress, weather conditions, crop development, and environmental moisture.
+SHAP plots were especially useful because they showed not only which features mattered most, but also how high or low values of those features influenced the model predictions.  
+<img width="346" height="232" alt="image" src="https://github.com/user-attachments/assets/5c975f0a-bb75-47da-ab3a-d19a68ba19cb" />
+<img width="390" height="440" alt="image" src="https://github.com/user-attachments/assets/3cb486e9-39ec-43f9-b933-af69b66a5d7d" />
 
 ### 11. Key Insights
 - What worked best and why
