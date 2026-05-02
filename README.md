@@ -135,6 +135,7 @@ AggregateMetadata.ipynb - Join the data from 2023 and 2024 keeping in mind that 
 AddWeatherNDVI.ipynb - Get weather features using point like temperature, precipitation, humidity and others frm the NLDAS satellite.  
 CountyWeather.ipynb - Get weather features using country like temperature, precipitation, humidity and others frm the NLDAS satellite. County is for anonymity and to check that there is not weather phenomenons occuring at point locations.  
 Sanity_checks.ipynb - Check for missing values and graph weather to features to check for following of seasons. For example, hottest in summer and coldest in winter. Higher precipition and NDVI in spring.  
+TwoStageMarch29.ipynb - Two Stage model
 
 ### 16. Requirements
 pandas
