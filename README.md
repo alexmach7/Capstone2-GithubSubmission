@@ -110,26 +110,40 @@ SHAP plots were especially useful because they showed not only which features ma
 <img width="346" height="232" alt="image" src="https://github.com/user-attachments/assets/5c975f0a-bb75-47da-ab3a-d19a68ba19cb" />
 <img width="390" height="440" alt="image" src="https://github.com/user-attachments/assets/3cb486e9-39ec-43f9-b933-af69b66a5d7d" />
 
-### 11. Key Insights
-- What worked best and why
-- What is the practical or business impact of your results?
+### 11. Key Insights  
+The best performing models were tree based machine learning models such as Random Forest, XGBoost, or LightGBM because they can capture nonlinear relationships between weather, vegetation indices, crop timing, and aflatoxin risk.
+Aflatoxin prediction is difficult because contamination is affected by many interacting biological and environmental factors. The dataset also contains many zero or contamination samples, which makes prediction more challenging.
+The practical impact of this project is that it could help identify fields or locations with higher aflatoxin risk before harvest. This can support better monitoring, targeted testing, and earlier decision-making for crop management and food safety.
+  
 
 ### 12. Conclusion
-- Final summary
-
+In this project I developed a machine learning workflow to predict aflatoxin contamination using environmental, remote sensing, and agronomic data. Multiple models were compared using classification and regression metrics. The results showed that tree-based models were useful for identifying important risk factors and predicting contamination patterns.
+Overall, the project demonstrates how data science, remote sensing, and agricultural data can be combined to support aflatoxin risk prediction and help farmers.
 
 ### 13. Future Work
-- Improvements and next steps
 
+Future improvements could include testing more advanced models such as neural networks. Also xpanding SHAP interpretation and editing models based on that information. Deploying the final model in a Streamlit app for farmers is a final step that would require exploring predicting weather features.
   
 ### 14. How to Run
-- Install dependencies
-- Run preprocessing
-- Train model
-- Evaluate results
+Install dependencies
+Run preprocessing
+Train model
+Evaluate results
   
 ### 15. Repository Structure Explanation
 Explain each file clearly
 
 ### 16. Requirements
-pip install -r requirements.txt
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+joblib
+streamlit
+shap
+xgboost
+lightgbm
+earthengine-api
+geemap
+geopandas
