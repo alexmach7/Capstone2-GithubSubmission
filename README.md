@@ -125,13 +125,16 @@ Overall, the project demonstrates how data science, remote sensing, and agricult
 Future improvements could include testing more advanced models such as neural networks. Also xpanding SHAP interpretation and editing models based on that information. Deploying the final model in a Streamlit app for farmers is a final step that would require exploring predicting weather features.
   
 ### 14. How to Run
-Install dependencies
-Run preprocessing
-Train model
-Evaluate results
+Install dependencies  
+Run preprocessing  
+Train model  
+Evaluate results  
   
 ### 15. Repository Structure Explanation
-Explain each file clearly
+AggregateMetadata.ipynb - Join the data from 2023 and 2024 keeping in mind that GPS locations change each each even if Location matches.  
+AddWeatherNDVI.ipynb - Get weather features using point like temperature, precipitation, humidity and others frm the NLDAS satellite.  
+CountyWeather.ipynb - Get weather features using country like temperature, precipitation, humidity and others frm the NLDAS satellite. County is for anonymity and to check that there is not weather phenomenons occuring at point locations.  
+Sanity_checks.ipynb - Check for missing values and graph weather to features to check for following of seasons. For example, hottest in summer and coldest in winter. Higher precipition and NDVI in spring.  
 
 ### 16. Requirements
 pandas
